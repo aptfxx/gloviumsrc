@@ -25,7 +25,7 @@ If at any point you want to discuss game additions, please DM our lead developer
 ## How do you use Glovium?
 
 To use Glovium, open your executor and attach. Once attached, run the code below
-```loadstring(game:HttpGet("glovium.aptfxx.dev"))```
+```loadstring(game:HttpGet('https://glovium.aptfxx.dev'))()```
 
 As soon as you open, you will be asked for authentication. Glovium runs purely off the community and we strive for **zero keysystems or paywalls**. The only reason you may see this message is because we're currently in closed beta and Glovium must require a one time password to use.  
 If you wish to test Glovium early, please DM our lead developer on Discord `@invokexpression` for inquires. Otherwise, stay tuned until Glovium fully releases to the public. 
