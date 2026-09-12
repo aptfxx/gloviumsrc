@@ -71,7 +71,7 @@ local function main()
     else
         warn("[GloviumLoader] Your game is not supported!")
         print("[GloviumLoader] Loading Universal...")
-        impropGame = "universal"
+        impropGame = "Universal"
     end
 
     local url = string.format(
