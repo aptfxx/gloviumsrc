@@ -61,6 +61,7 @@ local function main()
     local gameId = game and game.GameId
     local supportedGames = {
         [111958650] = "Arsenal",
+        [10549097626] = "ShootABrick",
     }
     print("[GloviumLoader] Game Checked!")
 
