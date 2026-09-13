@@ -13,7 +13,8 @@ ascii = [[
 ]]
 warn(ascii)
 
-if getgenv().Glovium and getgenv().Glovium.Access and getgenv().Glovium.Access ~= "EADEV" then warn("This version of Glovium requires a key.") return end 
+if not getgenv().Glovium or not getgenv().Glovium.Access then warn("This version of Glovium expects [getgenv().Glovium.Access] and a key provided.") return end
+if getgenv().Glovium.Access ~= "EADEV" then warn("This version of Glovium requires a key.") return end 
 
 local function grab(url)
     local ok, res = pcall(function()
