@@ -29,6 +29,7 @@ ascii = [[
 ]]
 warn(ascii)
 
+if getgenv().Glovium.Access ~= "EADEV" then warn("This version of Glovium requires a key.") return end 
 
 local function grab(url)
     local ok, res = pcall(function()
