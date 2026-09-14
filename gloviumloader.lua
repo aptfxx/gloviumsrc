@@ -46,6 +46,7 @@ local function main()
     local supportedGames = {
         [111958650] = "Arsenal",
         [10549097626] = "ShootABrick",
+        [9691480368] = "GrnG",
     }
     print("[GloviumLoader] Game Checked!")
 
