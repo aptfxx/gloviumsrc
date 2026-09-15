@@ -74,6 +74,7 @@ local function main()
         [111958650] = "Arsenal",
         [10549097626] = "ShootABrick",
         [9691480368] = "GrnG",
+        [10561206188] = "Verity"
     }
     print("[GloviumLoader] Game Checked!")
 
