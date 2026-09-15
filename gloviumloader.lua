@@ -70,12 +70,27 @@ end
 local function main()
     print("[GloviumLoader] Checking your game...")
     local gameId = game and game.GameId
-    local supportedGames = {
-        [111958650] = "Arsenal",
-        [10549097626] = "ShootABrick",
-        [9691480368] = "GrnG",
-        [10561206188] = "Verity"
-    }
+
+    local dataUrl = "https://raw.githubusercontent.com/aptfxx/gloviumsrc/refs/heads/main/gloviumdata.lua"
+    local dataOk, dataBody = grab(dataUrl)
+    local supportedGames = {}
+    if dataOk and type(dataBody) == "string" and dataBody ~= "" then
+        local modified = dataBody:gsub("local gloviumdata", "gloviumdata")
+        local dataFunc = loadstring(modified .. "\nreturn gloviumdata")
+        if dataFunc then
+            local dataOk2, data = pcall(dataFunc)
+            if dataOk2 and type(data) == "table" and data.GameShortNames then
+                supportedGames = data.GameShortNames
+            else
+                warn("[GloviumLoader] Failed to parse gloviumdata.")
+            end
+        else
+            warn("[GloviumLoader] Failed to load gloviumdata.")
+        end
+    else
+        warn("[GloviumLoader] Failed to fetch gloviumdata.")
+    end
+
     print("[GloviumLoader] Game Checked!")
 
     local impropGame
