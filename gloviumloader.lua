@@ -11,6 +11,19 @@ else
       drawingTest:Destroy()
 end
 
+if getgenv().GloviumExecInSession == true then 
+      local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+      Rayfield:Notify({
+          Title = "Glovium",
+          Content = "Glovium has detected you have run the loader multiple times in one session. Some features may break if you didn't properly disable them! Rejoin for the best experience.",
+          Duration = 15,
+          Image = 125920361880643
+      })
+      task.wait(16)
+      Rayfield:Unload()
+end
+
+
 ascii = [[
 
 
