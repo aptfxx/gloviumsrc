@@ -1,3 +1,16 @@
+print("[GloviumBootstrapper] Checking Compatibility for executor "..getexecutorname())
+if string.find(getexecutorname(), "Potassium") or string.find(getexecutorname(), "Volt") then 
+      print("[GloviumBootstrapper] Your executor is guaranteed to be compatible!")
+else
+      print("[GloviumBootstrapper] Your executor isnt confirmed to work, checking executor...")
+      if not debug then warn("[GlovimBootstrapper] Your executor lacks debug, some features may not be avaliable") end
+      local drawingTest = Drawing.new("Circle")
+      if typeof(drawingTest) == nil then warn("[GlovimBootstrapper] Your executor lacks a drawing library, some features may not be avaliable") end
+      print("[GloviumBootstrapper] Test completed.")
+      task.wait(0.1)
+      drawingTest:Destroy()
+end
+
 ascii = [[
 
 
