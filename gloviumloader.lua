@@ -23,6 +23,7 @@ if getgenv().GloviumExecInSession == true then
 end
 
 
+
 getgenv().GloviumExecInSession = true
 
 ascii = [[
@@ -70,7 +71,7 @@ end
 local function main()
     print("[GloviumLoader] Checking your game...")
     local gameId = game and game.GameId
-
+    getgenv().RAYFIELD_ASSET_ID = 118544334002537
     local dataUrl = "https://raw.githubusercontent.com/aptfxx/gloviumsrc/refs/heads/main/gloviumdata.lua"
     local dataOk, dataBody = grab(dataUrl)
     local supportedGames = {}
